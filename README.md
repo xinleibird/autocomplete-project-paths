@@ -2,11 +2,12 @@
 
 [![Build Status](https://travis-ci.org/miya0001/autocomplete-project-paths.svg)](https://travis-ci.org/miya0001/autocomplete-project-paths)
 
-* Adds path autocompletion to autocomplete+
-* If filename starts a slash ("/"), then it is interpreted as a relative pathname in the project folder.
-* This project is forked from [autocomplete-paths](https://github.com/atom-community/autocomplete-paths).
+This project is forked from [autocomplete-paths](https://github.com/atom-community/autocomplete-paths).
 
-![autocomplete-paths](http://s1.directupload.net/images/140411/p5kvife6.gif)
+* Adds path autocompletion to autocomplete+
+* If filename starts from a slash `/`, then it is interpreted as a relative pathname in the project folder.
+
+![autocomplete-project-paths](http://miya0001.github.io/autocomplete-project-paths/autocomplete-project-paths.gif)
 
 ## Installation
 
