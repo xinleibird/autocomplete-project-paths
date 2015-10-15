@@ -14,3 +14,8 @@ This project is forked from [autocomplete-paths](https://github.com/atom-communi
 ```
 $ apm install autocomplete-project-paths
 ```
+
+## Related
+
+* https://atom.io/packages/autocomplete-project-paths
+* https://github.com/atom-community/autocomplete-paths
