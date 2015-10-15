@@ -53,7 +53,7 @@ class PathsProvider
   findSuggestionsForPrefix: (editor, basePath, prefix) ->
     return [] unless basePath?
 
-    prefixPath = path.resolve(basePath, prefix)
+    prefixPath = path.resolve(basePath, prefix.replace(/^\//, ''))
 
     if prefix.endsWith('/')
       directory = prefixPath

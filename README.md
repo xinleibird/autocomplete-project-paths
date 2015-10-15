@@ -1,15 +1,15 @@
-# autocomplete+ paths suggestions [![Build Status](https://travis-ci.org/atom-community/autocomplete-paths.svg?branch=master)](https://travis-ci.org/atom-community/autocomplete-paths)
+# autocomplete-project-paths
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/atom-community/autocomplete-paths?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/miya0001/autocomplete-project-paths.svg)](https://travis-ci.org/miya0001/autocomplete-project-paths)
 
-[View the changelog](https://github.com/atom-community/autocomplete-paths/blob/master/CHANGELOG.md)
-
-Adds path autocompletion to autocomplete+
+* Adds path autocompletion to autocomplete+
+* If filename starts a slash ("/"), then it is interpreted as a relative pathname in the project folder.
+* This project is forked from [autocomplete-paths](https://github.com/atom-community/autocomplete-paths).
 
 ![autocomplete-paths](http://s1.directupload.net/images/140411/p5kvife6.gif)
 
 ## Installation
 
-You can install autocomplete-paths using the Preferences pane.
-
-**Please make sure you have autocomplete-plus installed as well**
+```
+$ apm install autocomplete-project-paths
+```
