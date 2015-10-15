@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-project-paths",
   "main": "./lib/autocomplete-paths",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Adds project path autocompletion to autocomplete+",
   "repository": "https://github.com/miya0001/autocomplete-project-paths",
   "license": "MIT",
