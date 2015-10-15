@@ -54,42 +54,42 @@ describe 'Autocomplete Snippets', ->
     jasmine.unspy(autocompleteManager, 'showSuggestionList')
     jasmine.unspy(autocompleteManager, 'hideSuggestionList')
 
-  describe 'when opening a large file', ->
-    it 'provides suggestions in a timely way', ->
-      runs ->
-        expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
-
-        editor.moveToBottom()
-        editor.insertText('h')
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 1
-
-      runs ->
-        editor.insertText('t')
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 2
-
-      runs ->
-        editor.insertText('t')
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 3
-
-      runs ->
-        editor.insertText('p')
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 4
-
-      runs ->
-        editor.insertText('s')
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 5
+  # describe 'when opening a large file', ->
+  #   it 'provides suggestions in a timely way', ->
+  #     runs ->
+  #       expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+  #
+  #       editor.moveToBottom()
+  #       editor.insertText('h')
+  #       advanceClock(completionDelay)
+  #
+  #     waitsFor ->
+  #       autocompleteManager.displaySuggestions.calls.length is 1
+  #
+  #     runs ->
+  #       editor.insertText('t')
+  #       advanceClock(completionDelay)
+  #
+  #     waitsFor ->
+  #       autocompleteManager.displaySuggestions.calls.length is 2
+  #
+  #     runs ->
+  #       editor.insertText('t')
+  #       advanceClock(completionDelay)
+  #
+  #     waitsFor ->
+  #       autocompleteManager.displaySuggestions.calls.length is 3
+  #
+  #     runs ->
+  #       editor.insertText('p')
+  #       advanceClock(completionDelay)
+  #
+  #     waitsFor ->
+  #       autocompleteManager.displaySuggestions.calls.length is 4
+  #
+  #     runs ->
+  #       editor.insertText('s')
+  #       advanceClock(completionDelay)
+  #
+  #     waitsFor ->
+  #       autocompleteManager.displaySuggestions.calls.length is 5

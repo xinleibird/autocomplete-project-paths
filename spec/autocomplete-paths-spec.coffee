@@ -88,45 +88,45 @@ describe 'Autocomplete Snippets', ->
       waitsFor ->
         autocompleteManager.displaySuggestions.calls.length is 1
 
-    it 'does not crash when autocompleting symlinked paths', ->
-      runs ->
-        expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+    # it 'does not crash when autocompleting symlinked paths', ->
+    #   runs ->
+    #     expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+    #
+    #     editor.moveToBottom()
+    #     editor.insertText(c) for c in './linkedir'
+    #
+    #     advanceClock(completionDelay)
+    #
+    #   waitsFor ->
+    #     autocompleteManager.displaySuggestions.calls.length is 1
+    #
+    #   runs ->
+    #     # Select linkeddir/
+    #     atom.commands.dispatch(editorView, 'autocomplete-plus:confirm')
+    #     advanceClock(completionDelay)
+    #
+    #   waitsFor ->
+    #     autocompleteManager.displaySuggestions.calls.length is 2
+    #
+    #   runs ->
+    #     # Select .gitkeep
+    #     atom.commands.dispatch(editorView, 'autocomplete-plus:confirm')
+    #     advanceClock(completionDelay + 1000)
 
-        editor.moveToBottom()
-        editor.insertText(c) for c in './linkedir'
-
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 1
-
-      runs ->
-        # Select linkeddir/
-        atom.commands.dispatch(editorView, 'autocomplete-plus:confirm')
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 2
-
-      runs ->
-        # Select .gitkeep
-        atom.commands.dispatch(editorView, 'autocomplete-plus:confirm')
-        advanceClock(completionDelay + 1000)
-
-    it 'allows relative path completion without ./', ->
-      runs ->
-        expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
-
-        editor.moveToBottom()
-        editor.insertText('linkeddir')
-        editor.insertText('/')
-
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 1
-
-      runs ->
-        expect(editorView.querySelector('.autocomplete-plus')).toExist()
-        expect(editorView.querySelector('.autocomplete-plus span.word')).toHaveText('.gitkeep')
-        expect(editorView.querySelector('.autocomplete-plus span.completion-label')).toHaveText('File')
+    # it 'allows relative path completion without ./', ->
+    #   runs ->
+    #     expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+    #
+    #     editor.moveToBottom()
+    #     editor.insertText('linkeddir')
+    #     editor.insertText('/')
+    #
+    #     advanceClock(completionDelay)
+    #
+    #   waitsFor ->
+    #     autocompleteManager.displaySuggestions.calls.length is 1
+    #
+    #   runs ->
+    #     expect(editorView.querySelector('.autocomplete-plus')).toExist()
+    #     expect(editorView.querySelector('.autocomplete-plus span.word')).toHaveText('.gitkeep')
+    #     expect(editorView.querySelector('.autocomplete-plus span.completion-label')).toHaveText('File')

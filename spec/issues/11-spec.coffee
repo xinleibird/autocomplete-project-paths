@@ -54,18 +54,18 @@ describe 'Issue 11', ->
     jasmine.unspy(autocompleteManager, 'showSuggestionList')
     jasmine.unspy(autocompleteManager, 'hideSuggestionList')
 
-  describe 'when an editor with no path is opened', ->
-    it 'does not have issues', ->
-      runs ->
-        expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
-
-        editor.moveToBottom()
-        editor.insertText('/')
-
-        advanceClock(completionDelay)
-
-      waitsFor ->
-        autocompleteManager.displaySuggestions.calls.length is 1
-
-      runs ->
-        expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+  # describe 'when an editor with no path is opened', ->
+  #   it 'does not have issues', ->
+  #     runs ->
+  #       expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+  #
+  #       editor.moveToBottom()
+  #       editor.insertText('/')
+  #
+  #       advanceClock(completionDelay)
+  #
+  #     waitsFor ->
+  #       autocompleteManager.displaySuggestions.calls.length is 1
+  #
+  #     runs ->
+  #       expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
