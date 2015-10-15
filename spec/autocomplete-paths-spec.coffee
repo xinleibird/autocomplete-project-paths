@@ -15,7 +15,7 @@ describe 'Autocomplete Snippets', ->
       jasmine.attachToDOM(workspaceElement)
       autocompleteMain = atom.packages.loadPackage('autocomplete-plus').mainModule
       spyOn(autocompleteMain, 'consumeProvider').andCallThrough()
-      pathsMain = atom.packages.loadPackage('autocomplete-paths').mainModule
+      pathsMain = atom.packages.loadPackage('autocomplete-project-paths').mainModule
       spyOn(pathsMain, 'provide').andCallThrough()
 
     waitsForPromise ->
@@ -40,7 +40,7 @@ describe 'Autocomplete Snippets', ->
       spyOn(autocompleteManager, 'hideSuggestionList').andCallThrough()
 
     waitsForPromise ->
-      atom.packages.activatePackage('autocomplete-paths')
+      atom.packages.activatePackage('autocomplete-project-paths')
 
     waitsFor ->
       pathsMain.provide.calls.length is 1
