@@ -7,7 +7,7 @@ module.exports =
 class PathsProvider
   id: 'autocomplete-paths-pathsprovider'
   selector: '*'
-  wordRegex: /[a-zA-Z0-9\.\/_-]*\/[a-zA-Z0-9\.\/_-]*/g
+  wordRegex: /['"][a-zA-Z0-9\.\/_-]*\/[a-zA-Z0-9\.\/_-]*/g
   cache: []
 
   requestHandler: (options = {}) =>
